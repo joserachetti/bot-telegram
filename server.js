@@ -111,7 +111,7 @@ bot.hears('¡Quiero contar! 🔢', ctx => {
 
         addNumber(),
 
-            ctx.reply(`Numero sumado: ${number}`)
+            ctx.reply(`Número sumado: ${number}`)
 
     }
 

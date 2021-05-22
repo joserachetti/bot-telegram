@@ -8,12 +8,12 @@ const fetch = require('node-fetch');
 
 
 let number = 0;
-var bot = new Telegraf('TOKEN_Telegram')
+var bot = new Telegraf('1841282327:AAFxYzj5QwFlViZ9fVtMFN9CpQ826jO8gqk')
 
 
-const clima = new Scenes.WizardScene(
+const weather = new Scenes.WizardScene(
 
-    'clima_id',
+    'weather_id',
 
     ctx => {
         ctx.reply('Ingrese la ciudad');
@@ -36,7 +36,7 @@ const clima = new Scenes.WizardScene(
 
         ctx.reply(` Voy a buscar el clima en: ${nameCity},${countryCode}`)
 
-        const appID = 'TOKEN_openweathermap'
+        const appID = '1d188893ded73cd406bc8fb3985fba9d'
 
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${nameCity},${countryCode}&units=metric&lang=sp&appid=${appID}`
 
@@ -78,7 +78,7 @@ const clima = new Scenes.WizardScene(
 
 )
 
-const stage = new Scenes.Stage([clima]);
+const stage = new Scenes.Stage([weather]);
 bot.use(session());
 bot.use(stage.middleware());
 
@@ -103,7 +103,7 @@ bot.start((ctx) => {
 bot.hears('¡Quiero saber el clima!☀️',
 
 
-    Scenes.Stage.enter('clima_id')
+    Scenes.Stage.enter('weather_id')
 
 )
 

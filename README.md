@@ -1,6 +1,6 @@
 # bot-telegram
 
-Bot hecho en Node que permite saber el clima de una ciudad y sumar un número.
+Bot hecho en NodeJS que permite saber el clima de una ciudad y sumar un número.
 
 Comando inicial para instalar modulos NodeJS:
 
